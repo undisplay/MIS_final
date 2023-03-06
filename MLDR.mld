@@ -1,0 +1,12 @@
+# Modèle créé le : Mon Mar 06 09:21:09 EST 2023 
+Clients (ID_client_Clients, Nom_client_Clients, Telephone_client_Clients, Adresse_client_Clients) 
+Compagnies_assurances (ID_compagnie_Compagnies_assurances, Nom_compagnie_Compagnies_assurances, Adresse_compagnie_Compagnies_assurances, Telephone_compagnie_Compagnies_assurances) 
+Contrats (ID_contrat_Contrats, Type_contrat_Contrats, Date_souscription_Contrats, #ID_compagnie_Compagnies_assurances, #ID_client_Clients) 
+Sinistres (ID_sinistre_Sinistres, Date_sinistre_Sinistres, Montant_facture_Sinistres, Montant_indemnite_Sinistres, Type_prejudice_Sinistres, #ID_contrat_Contrats) 
+Utilisateurs (ID_utilisateur_Utilisateurs, Username_Utilisateurs, Password_Utilisateurs) 
+Groupes (Nom_groupe_Groupes) 
+Permissions (label_Permissions) 
+lier (ID_utilisateur_Utilisateurs, ID_client_Clients) 
+appartenir (Nom_groupe_Groupes, ID_utilisateur_Utilisateurs) 
+contenir (Nom_groupe_Groupes, label_Permissions) 
+posseder (ID_utilisateur_Utilisateurs, label_Permissions) 
