@@ -1,4 +1,5 @@
 from django.contrib import admin
+from django.contrib.auth.admin import UserAdmin
 
 # Register your models here.
 # vim: set fileencoding=utf-8 :
@@ -7,7 +8,7 @@ from django.contrib import admin
 import manager.models as models
 
 
-class UtilisateurAdmin(admin.ModelAdmin):
+class UtilisateurAdmin(UserAdmin):
 
     list_display = (
         'id',
@@ -49,6 +50,7 @@ class ContratAdmin(admin.ModelAdmin):
         'date_souscription',
         'compagnie_assurance',
         'client',
+        'image_tag'
     )
     list_filter = (
         'date_souscription',
@@ -68,6 +70,7 @@ class SinistreAdmin(admin.ModelAdmin):
         'montant_indemnite',
         'type_prejudice',
         'contrat',
+        'image_tag'
     )
     list_filter = (
         'date_sinistre',
